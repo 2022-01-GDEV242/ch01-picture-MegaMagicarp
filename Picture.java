@@ -18,6 +18,7 @@ public class Picture
     private Circle doorTop;
     private Square door;
     private boolean drawn;
+    private Person handle;
 
     /**
      * Constructor for objects of class Picture
@@ -30,6 +31,7 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        handle = new Person();
         drawn = false;
     }
 
@@ -47,13 +49,21 @@ public class Picture
             
             door.changeColor("black");
             door.changeSize(40);
-            door.moveHorizontal(230);
-            door.moveVertical(220);
+            door.moveHorizontal(-75);
+            door.moveVertical(100);
             door.makeVisible();
             
             doorTop.makeVisible();
             doorTop.changeColor("black");
+            doorTop.moveHorizontal(4);
+            doorTop.moveVertical(110);
+            doorTop.changeSize(40);
             
+            handle.makeVisible();
+            handle.changeColor("white");
+            handle.changeSize(15,5);
+            handle.moveVertical(40);
+            handle.moveHorizontal(-11);
             
             window.changeColor("blue");
             window.moveHorizontal(-120);
@@ -61,10 +71,11 @@ public class Picture
             window.changeSize(40);
             window.makeVisible();
     
-            roof.changeSize(60, 180);
+            roof.changeSize(60,150);
             roof.moveHorizontal(20);
             roof.moveVertical(-60);
             roof.makeVisible();
+            roof.changeColor("red");
     
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
