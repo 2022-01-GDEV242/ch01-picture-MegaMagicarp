@@ -15,6 +15,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle doorTop;
+    private Square door;
     private boolean drawn;
 
     /**
@@ -23,6 +25,8 @@ public class Picture
     public Picture()
     {
         wall = new Square();
+        door = new Square();
+        doorTop = new Circle();
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
@@ -39,8 +43,19 @@ public class Picture
             wall.moveVertical(20);
             wall.changeSize(120);
             wall.makeVisible();
+            wall.changeColor("yellow");
             
-            window.changeColor("black");
+            door.changeColor("black");
+            door.changeSize(40);
+            door.moveHorizontal(230);
+            door.moveVertical(220);
+            door.makeVisible();
+            
+            doorTop.makeVisible();
+            doorTop.changeColor("black");
+            
+            
+            window.changeColor("blue");
             window.moveHorizontal(-120);
             window.moveVertical(40);
             window.changeSize(40);
